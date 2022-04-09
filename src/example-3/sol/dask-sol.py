@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import datetime
 import os
+import time
 
 import dask
 import dask.dataframe as dd
@@ -16,5 +17,9 @@ def name(i):
 df = dask.datasets.timeseries()
 df.to_csv('data/*.csv', name_function=name)
 
+start = time.time()
 df = dd.read_csv('data/2000-*-*.csv')
-df.groupby('name').x.mean().compute()
+print(df.groupby('name').x.mean().compute())
+end = time.time()
+
+print(f"Time to completion: {end - start}")

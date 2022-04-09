@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import datetime
 import os
+import time
 
 import dask
 import dask.dataframe as dd
@@ -15,3 +16,9 @@ def name(i):
 
 df = dask.datasets.timeseries()
 df.to_csv('data/*.csv', name_function=name)
+
+start = time.time()
+
+end = time.time()
+
+print(f"Time to completion: {end - start}")
