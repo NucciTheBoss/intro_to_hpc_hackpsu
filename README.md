@@ -57,9 +57,15 @@ You can use the `micro` text editor to edit files inside the container.
 
 ### Exercise 1 - mpi4py
 
+The mpi4py exercise is located in `src/example-1`
+
 ### Exercise 2 - numba
 
+The Numba exercise is located in `src/example-2`
+
 ### Exercise 3 - Dask
+
+The Dask exercise is located in `src/example-3`
 
 ## Authors
 
